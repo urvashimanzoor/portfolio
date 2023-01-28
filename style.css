@@ -1,0 +1,76 @@
+/* to all */
+:root{
+    --header-height:38px;
+    --footer-height:30px;
+}
+
+*{         
+    padding: 0;
+    margin: 0;
+    /* to add padding and border with height to all */
+    box-sizing: border-box;
+}
+
+html,body,main
+{
+    height: 100%;
+    color: white;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+
+}
+main{
+ position: relative;
+}
+header{
+    background-color: black;
+    height: var(--header-height);
+    position: fixed;
+    width: 100%;
+
+}
+.nav-link-wrapper{
+    height: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+
+}
+.nav-link{
+    color: white;
+    padding:0 10px;
+    display: flex;
+    align-items: center;
+}
+.nav-link:hover{
+    background-color: white;
+    color: black;
+}
+.main-wrapper{
+min-height: 100%;
+background-color: #8b827d;
+padding-bottom: var(--footer-height);
+padding-top: var(--header-height)
+/* cuz we want it to have 100% no matter which page */
+}
+
+.typewriter{
+    margin-top: 60px;
+    color: ivory;
+    font-size: 50px;
+}
+footer{
+    display:flex;
+    justify-content: center;
+    /* properties of display : flex, no need of text-align here we will use specific to flex, horizontal: justify-content  vertical: align-items: */
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: var(--footer-height);
+    background-color: black;
+}
