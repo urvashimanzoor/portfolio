@@ -1,0 +1,173 @@
+:root{
+    --header-height: 40px;
+    --footer-height: 30px;
+    --text-color:#4d4d4d;
+    --gray-box-color:#ccccccab;
+    --typewriter-margin-top: 60px;
+}
+
+*{  /* for all elements */
+    padding: 0;
+    margin: 0;
+
+    /* to add padding and border with height */
+    box-sizing: border-box;
+}
+
+
+
+
+html, body, main{
+    height: 100%;
+    color: #fff;
+}
+
+a,span{
+    display: inline-block;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
+
+main{
+    position: relative;
+    font-family: sans-serif;
+    
+}
+
+header{
+    height: var(--header-height);
+    position: fixed;
+    width: 100%;
+    
+}
+
+
+.nav-link-wrapper{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.nav-link{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.nav-link:hover{
+    background-color: #fff;
+    color: grey;
+}
+
+.main-wrapper{
+    min-height: 100%;
+    padding-bottom: var(--footer-height);
+    padding-top: var(--header-height);
+    display: flex;
+    justify-content: center;
+}
+
+.gray-box-wrapper{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.gray-box{
+    height: 100%;
+    width: 50%;
+    margin-left: auto;
+    background-color: var(--gray-box-color);
+}
+
+.gray-box-two-wrapper{
+    position: absolute;
+    top: var(--header-height);
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.gray-box-two{
+    height: 40%;
+    width: 70%;
+    margin-left: auto;
+    background-color: var(--gray-box-color);
+}
+
+.gray-box-three-wrapper{
+    position: absolute;
+    top: calc(var(--header-height) + var(--typewriter-margin-top) + 70px);
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    z-index: -1;
+}
+
+.gray-box-three{
+    height: 100%;
+    width: 70%;
+    /* margin-left: auto; */
+    background-color: var(--gray-box-color);
+}
+
+.typewriter{
+    margin-top: var(--typewriter-margin-top);
+    color: var(--text-color);
+    font-size: 40px;
+    text-align: center;
+    font-family: Montserrat, sans-serif;
+}
+
+.typewriter span{
+    overflow: hidden;
+    border-right: 2px solid var(--text-color);
+    letter-spacing: -2px;
+    white-space: nowrap;
+    margin: 0 auto;
+    font-weight: 700;
+    font-size: 50px;
+    
+    animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
+footer{
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    height: var(--footer-height);
+}
+
+/* keyframes */
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: var(--text-color) }
+}
+
+
+
+
