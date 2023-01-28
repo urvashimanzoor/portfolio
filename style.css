@@ -27,7 +27,7 @@ main{
  position: relative;
 }
 header{
-    background-color: black;
+    background-color: rgb(85, 75, 75);
     height: var(--header-height);
     position: fixed;
     width: 100%;
@@ -63,6 +63,9 @@ padding-top: var(--header-height)
     color: ivory;
     font-size: 50px;
 }
+.writing data{
+    
+}
 footer{
     display:flex;
     justify-content: center;
@@ -72,5 +75,5 @@ footer{
     bottom: 0;
     width: 100%;
     height: var(--footer-height);
-    background-color: black;
+    background-color: rgb(85, 75, 75);
 }
