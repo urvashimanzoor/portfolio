@@ -2,6 +2,8 @@
 :root{
     --header-height:38px;
     --footer-height:30px;
+    --text-color: ivory;
+    --typewriter-margin-top: 60px;
 }
 
 *{         
@@ -10,6 +12,9 @@
     /* to add padding and border with height to all */
     box-sizing: border-box;
 }
+body{
+    background-color: #cccc;
+}
 
 html,body,main
 {
@@ -17,17 +22,21 @@ html,body,main
     color: white;
 }
 
+a,span{
+    display: inline-block;
+}
+
 a{
     color: white;
     text-decoration: none;
-    display: inline-block;
 
 }
+
 main{
  position: relative;
 }
+
 header{
-    background-color: black;
     height: var(--header-height);
     position: fixed;
     width: 100%;
@@ -41,7 +50,7 @@ header{
 
 }
 .nav-link{
-    color: white;
+    height: 100%;
     padding:0 10px;
     display: flex;
     align-items: center;
@@ -51,18 +60,83 @@ header{
     color: black;
 }
 .main-wrapper{
-min-height: 100%;
-background-color: #8b827d;
-padding-bottom: var(--footer-height);
-padding-top: var(--header-height)
-/* cuz we want it to have 100% no matter which page */
+    min-height: 100%;
+    padding-bottom: var(--footer-height);
+    padding-top: var(--header-height);
+    display: flex;
+    justify-content: center;
+/* use display and just cont if you want to align Urvashi Manzoor to some other side.
+cuz we want it to have 100% no matter which page */
+}
+
+.grey-box-wrapper{
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.grey-box{
+    height: 100%;
+    width: 50%;
+    margin-left: auto;
+    background-color: rgb(121 151 159 / 35%) ;
+}
+
+.grey-box-two-wrapper{
+    position: absolute;
+    top:var(--header-height);
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.grey-box-two{
+    height: 40%;
+    width: 60%;
+    margin-left: auto;
+    background-color: rgb(121 151 159 / 35%) ;
+}
+
+.grey-box-three-wrapper{
+    position: absolute;
+    top:calc(var(--header-height) + var(--typewriter-margin-top) + 85px);
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    z-index: -1;
+}
+
+.grey-box-three{
+    height: 100%;
+    width: 60%;
+    /* margin-left: auto; since we used display flex above now. */
+    background-color: rgb(121 151 159 / 35%) ;
 }
 
 .typewriter{
-    margin-top: 60px;
-    color: ivory;
-    font-size: 50px;
+    margin-top: var(--typewriter-margin-top);
+    color: var(--text-color);
+    font-size: 80px;
+    text-align: center;
+    font-family: Montserrat, sans-serif;
 }
+.typewriter span{
+    overflow:hidden;
+    border-right: 1px solid var(--text-color);
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: -4px;
+    animation: 
+    typing 3.5s steps(40,end),
+    blink-caret .75s step-end infinite;
+}
+
 footer{
     display:flex;
     justify-content: center;
@@ -72,5 +146,19 @@ footer{
     bottom: 0;
     width: 100%;
     height: var(--footer-height);
-    background-color: black;
+    letter-spacing: 1px;
+    font-weight: 500;
+    font-size: larger;
+    /* background-color: rgb(121, 151, 159); */
+}
+
+/* keyframes - module */
+@keyframes typing{
+    from {width: 0}
+    to {width :100%}
+}
+
+@keyframes blink-caret{
+    from, to {border-color: transparent}
+    50%{ border-color: var(--text-color)}
 }
