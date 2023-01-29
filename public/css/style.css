@@ -1,0 +1,127 @@
+@font-face {
+  font-family: "CourierPrime Regular";
+  src: url("/assets/fonts/CourierPrime/CourierPrime-Regular.ttf") format("truetype"); }
+
+@keyframes typing {
+  from {
+    width: 0; }
+  to {
+    width: 100%; } }
+
+@keyframes blink-caret {
+  from,
+  to {
+    background-color: transparent; }
+  50% {
+    background-color: #fffff0; } }
+
+.teal-box {
+  height: 100%;
+  width: 50%;
+  margin-left: auto;
+  background-color: #79979fa1; }
+  .teal-box-wrapper {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -2; }
+  .teal-box-two {
+    height: 50%;
+    width: 63%;
+    margin-left: auto;
+    background-color: #79979fa1; }
+    .teal-box-two-wrapper {
+      position: absolute;
+      top: 38px;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: -1; }
+  .teal-box-three {
+    height: 100%;
+    width: 60%;
+    /* margin-left: auto; since we used display flex above now. */
+    background-color: #79979fa1; }
+    .teal-box-three img {
+      box-shadow: 2px 2px 15px #cccc;
+      clip-path: inset(-1px -2px -15px -1px); }
+    .teal-box-three-wrapper {
+      position: absolute;
+      top: calc(38px + 60px + 85px);
+      bottom: 0;
+      left: 0;
+      right: 0;
+      display: flex;
+      justify-content: center;
+      z-index: -2; }
+
+* {
+  padding: 0;
+  margin: 0;
+  /* to add padding and border with height to all */
+  box-sizing: border-box; }
+
+body {
+  background-color: #6a3952; }
+
+html,
+body,
+main {
+  height: 100%;
+  color: #cccc; }
+
+a,
+span {
+  display: inline-block; }
+
+a {
+  color: white;
+  text-decoration: none; }
+
+main {
+  position: relative; }
+  main .main-wrapper {
+    min-height: 100%;
+    padding-top: 38px;
+    display: flex;
+    justify-content: center;
+    /* use display and just cont if you want to align Urvashi Manzoor to some other side.
+cuz we want it to have 100% no matter which page */ }
+  main header {
+    height: 38px;
+    position: fixed;
+    width: 100%; }
+    main header .nav-link {
+      height: 100%;
+      padding: 0 10px;
+      display: flex;
+      align-items: center; }
+      main header .nav-link-wrapper {
+        height: 100%;
+        display: flex;
+        justify-content: end;
+        align-items: center; }
+      main header .nav-link:hover {
+        background-color: #ffffff;
+        color: black; }
+  main .typewriter {
+    margin-top: 60px;
+    color: #fffff0;
+    font-size: 50px;
+    text-align: center;
+    font-family: "CourierPrime Regular", sans-serif;
+    height: fit-content;
+    display: flex; }
+    main .typewriter .title {
+      overflow: hidden;
+      white-space: nowrap;
+      letter-spacing: -4px;
+      font-size: 50px;
+      animation: typing 3.5s steps(40, end); }
+    main .typewriter .prompt {
+      align-self: end;
+      width: 25px;
+      height: 3px;
+      animation: blink-caret 0.75s step-end infinite; }

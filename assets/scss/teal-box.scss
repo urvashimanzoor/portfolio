@@ -1,0 +1,50 @@
+.teal-box {
+  height: 100%;
+  width: 50%;
+  margin-left: auto;
+  background-color: $teal-box-color;
+  &-wrapper {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -2;
+  }
+  &-two {
+    height: 50%;
+    width: 63%;
+    margin-left: auto;
+    background-color: $teal-box-color;
+    &-wrapper {
+      position: absolute;
+      top: $header-height;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: -1;
+    }
+  }
+  &-three {
+    height: 100%;
+    width: 60%;
+    /* margin-left: auto; since we used display flex above now. */
+    background-color: $teal-box-color;
+
+    & img {
+      box-shadow: 2px 2px 15px #cccc;
+      clip-path: inset(-1px -2px -15px -1px);
+    }
+
+    &-wrapper {
+      position: absolute;
+      top: calc(#{$header-height} + #{$typewriter-margin-top} + 85px);
+      bottom: 0;
+      left: 0;
+      right: 0;
+      display: flex;
+      justify-content: center;
+      z-index: -2;
+    }
+  }
+}
