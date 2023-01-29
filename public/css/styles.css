@@ -1,0 +1,128 @@
+@font-face {
+  font-family: "Courier Prime Bold";
+  src: url("/assets/fonts/CourierPrime/CourierPrime-Bold.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "Courier Prime Regular";
+  src: url("/assets/fonts/CourierPrime/CourierPrime-Regular.ttf") format("truetype"); }
+
+@keyframes typing {
+  from {
+    width: 0; }
+  to {
+    width: 100%; } }
+
+@keyframes blink-caret {
+  from,
+  to {
+    background-color: transparent; }
+  50% {
+    background-color: #4d4d4d; } }
+
+.gray-box {
+  height: 100%;
+  width: 50%;
+  margin-left: auto;
+  background-color: #ccccccab; }
+  .gray-box-wrapper {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -2; }
+  .gray-box-two {
+    height: 40%;
+    width: 70%;
+    margin-left: auto;
+    background-color: #ccccccab; }
+    .gray-box-two-wrapper {
+      position: absolute;
+      top: 40px;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: -1; }
+  .gray-box-three {
+    height: 100%;
+    width: 70%;
+    background-color: #ccccccab; }
+    .gray-box-three img {
+      box-shadow: 0 0 15px #0000005c;
+      clip-path: inset(0px 0px -15px 0px); }
+    .gray-box-three-wrapper {
+      position: absolute;
+      top: calc(40px + 60px + 70px);
+      bottom: 0;
+      left: 0;
+      right: 0;
+      display: flex;
+      justify-content: center;
+      z-index: -2; }
+
+* {
+  /* for all elements */
+  padding: 0;
+  margin: 0;
+  /* to add padding and border with height */
+  box-sizing: border-box; }
+
+html,
+body,
+main {
+  height: 100%;
+  color: #fff; }
+
+a,
+span {
+  display: inline-block; }
+
+a {
+  text-decoration: none;
+  color: #fff; }
+
+main {
+  position: relative;
+  font-family: sans-serif; }
+  main .main-wrapper {
+    min-height: 100%;
+    padding-top: 40px;
+    display: flex;
+    justify-content: center; }
+  main header {
+    height: 40px;
+    position: fixed;
+    width: 100%; }
+    main header .nav-link {
+      color: #4d4d4d;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      padding: 0 10px; }
+      main header .nav-link:hover {
+        background-color: #fff;
+        color: grey; }
+      main header .nav-link-wrapper {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: end; }
+  main .typewriter {
+    margin-top: 60px;
+    color: #4d4d4d;
+    font-size: 50px;
+    text-align: center;
+    font-family: "Courier Prime Regular", "sans-serif";
+    height: fit-content;
+    display: flex; }
+    main .typewriter .title {
+      overflow: hidden;
+      letter-spacing: -2px;
+      white-space: nowrap;
+      animation: typing 3.5s steps(40, end); }
+    main .typewriter .prompt {
+      align-self: end;
+      width: 25px;
+      height: 2px;
+      background-color: #4d4d4d;
+      animation: blink-caret 0.75s step-end infinite; }

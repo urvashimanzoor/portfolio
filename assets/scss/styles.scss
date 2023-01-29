@@ -1,0 +1,92 @@
+@import "animations.scss", "gray-box.scss";
+
+* {
+  /* for all elements */
+  padding: 0;
+  margin: 0;
+
+  /* to add padding and border with height */
+  box-sizing: border-box;
+}
+
+html,
+body,
+main {
+  height: 100%;
+  color: #fff;
+}
+
+a,
+span {
+  display: inline-block;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+main {
+  position: relative;
+  font-family: sans-serif;
+
+  & .main-wrapper {
+    min-height: 100%;
+    padding-top: $header-height;
+    display: flex;
+    justify-content: center;
+  }
+
+  // header styles
+  & header {
+    height: $header-height;
+    position: fixed;
+    width: 100%;
+
+    & .nav-link {
+      color: $text-color;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      padding: 0 10px;
+
+      &:hover {
+        background-color: #fff;
+        color: grey;
+      }
+
+      &-wrapper {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+      }
+    }
+  }
+
+  // typewriter effect
+  & .typewriter {
+    margin-top: $typewriter-margin-top;
+    color: $text-color;
+    font-size: $typewriter-font-size;
+    text-align: center;
+    font-family: $font-family-typewriter;
+    height: fit-content;
+    display: flex;
+    & .title {
+      overflow: hidden;
+      letter-spacing: -2px;
+      white-space: nowrap;
+
+      animation: typing 3.5s steps(40, end);
+    }
+
+    & .prompt {
+      align-self: end;
+      width: 25px;
+      height: 2px;
+      background-color: $text-color;
+      animation: blink-caret 0.75s step-end infinite;
+    }
+  }
+}

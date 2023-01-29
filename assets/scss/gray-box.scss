@@ -1,0 +1,54 @@
+// background effects
+.gray-box {
+  height: 100%;
+  width: 50%;
+  margin-left: auto;
+  background-color: $gray-box-color;
+
+  &-wrapper {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -2;
+  }
+
+  &-two {
+    height: 40%;
+    width: 70%;
+    margin-left: auto;
+    background-color: $gray-box-color;
+
+    &-wrapper {
+      position: absolute;
+      top: $header-height;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: -1;
+    }
+  }
+
+  &-three {
+    height: 100%;
+    width: 70%;
+    background-color: $gray-box-color;
+
+    & img {
+      box-shadow: 0 0 15px #0000005c;
+      clip-path: inset(0px 0px -15px 0px);
+    }
+
+    &-wrapper {
+      position: absolute;
+      top: calc(#{$header-height} + #{$typewriter-margin-top} + 70px);
+      bottom: 0;
+      left: 0;
+      right: 0;
+      display: flex;
+      justify-content: center;
+      z-index: -2;
+    }
+  }
+}
