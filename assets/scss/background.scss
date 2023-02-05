@@ -1,0 +1,21 @@
+@import "variables.scss";
+
+.main-background {
+  height: 2rem;
+  width: 2rem;
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  & .line {
+    height: 0.2rem;
+    width: 100%;
+    background-color: grey;
+    border-radius: 50%;
+  }
+
+  & .line-2 {
+    transform: rotate(90deg);
+    position: absolute;
+  }
+}

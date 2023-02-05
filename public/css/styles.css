@@ -38,7 +38,7 @@
     background-color: #ccccccab; }
     .gray-box-two-wrapper {
       position: absolute;
-      top: 40px;
+      top: 6rem;
       bottom: 0;
       left: 0;
       right: 0;
@@ -48,11 +48,11 @@
     width: 70%;
     background-color: #ccccccab; }
     .gray-box-three img {
-      box-shadow: 0 0 15px #0000005c;
-      clip-path: inset(0px 0px -15px 0px); }
+      box-shadow: 0 0 1.5rem #0000005c;
+      clip-path: inset(0 0 -1.5rem 0); }
     .gray-box-three-wrapper {
       position: absolute;
-      top: calc(40px + 60px + 70px);
+      top: calc(6rem + 7rem + 7rem);
       bottom: 0;
       left: 0;
       right: 0;
@@ -60,12 +60,38 @@
       justify-content: center;
       z-index: -2; }
 
+@font-face {
+  font-family: "Courier Prime Bold";
+  src: url("/assets/fonts/CourierPrime/CourierPrime-Bold.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "Courier Prime Regular";
+  src: url("/assets/fonts/CourierPrime/CourierPrime-Regular.ttf") format("truetype"); }
+
+.main-background {
+  height: 2rem;
+  width: 2rem;
+  display: flex;
+  align-items: center;
+  position: relative; }
+  .main-background .line {
+    height: 0.2rem;
+    width: 100%;
+    background-color: grey;
+    border-radius: 50%; }
+  .main-background .line-2 {
+    transform: rotate(90deg);
+    position: absolute; }
+
 * {
   /* for all elements */
   padding: 0;
   margin: 0;
   /* to add padding and border with height */
   box-sizing: border-box; }
+
+html {
+  font-size: 10px; }
 
 html,
 body,
@@ -86,11 +112,11 @@ main {
   font-family: sans-serif; }
   main .main-wrapper {
     min-height: 100%;
-    padding-top: 40px;
+    padding-top: 6rem;
     display: flex;
     justify-content: center; }
   main header {
-    height: 40px;
+    height: 6rem;
     position: fixed;
     width: 100%; }
     main header .nav-link {
@@ -98,7 +124,7 @@ main {
       height: 100%;
       display: flex;
       align-items: center;
-      padding: 0 10px; }
+      padding: 0 1rem; }
       main header .nav-link:hover {
         background-color: #fff;
         color: grey; }
@@ -106,23 +132,23 @@ main {
         height: 100%;
         display: flex;
         align-items: center;
-        justify-content: end; }
+        justify-content: end;
+        font-size: 1.6rem; }
   main .typewriter {
-    margin-top: 60px;
+    margin-top: 7rem;
     color: #4d4d4d;
-    font-size: 50px;
+    font-size: 6rem;
     text-align: center;
     font-family: "Courier Prime Regular", "sans-serif";
     height: fit-content;
     display: flex; }
     main .typewriter .title {
       overflow: hidden;
-      letter-spacing: -2px;
       white-space: nowrap;
       animation: typing 3.5s steps(40, end); }
     main .typewriter .prompt {
       align-self: end;
-      width: 25px;
-      height: 2px;
+      width: 2.5rem;
+      height: 0.2rem;
       background-color: #4d4d4d;
       animation: blink-caret 0.75s step-end infinite; }

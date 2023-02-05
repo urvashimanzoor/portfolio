@@ -36,13 +36,13 @@
     background-color: $gray-box-color;
 
     & img {
-      box-shadow: 0 0 15px #0000005c;
-      clip-path: inset(0px 0px -15px 0px);
+      box-shadow: 0 0 1.5rem #0000005c;
+      clip-path: inset(0 0 -1.5rem 0);
     }
 
     &-wrapper {
       position: absolute;
-      top: calc(#{$header-height} + #{$typewriter-margin-top} + 70px);
+      top: calc(#{$header-height} + #{$typewriter-margin-top} + 7rem);
       bottom: 0;
       left: 0;
       right: 0;
