@@ -68,12 +68,22 @@
   font-family: "Courier Prime Regular";
   src: url("/assets/fonts/CourierPrime/CourierPrime-Regular.ttf") format("truetype"); }
 
+#main-background-wrapper {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -3; }
+
 .main-background {
-  height: 2rem;
-  width: 2rem;
-  display: flex;
+  height: 3rem;
+  width: 3rem;
+  display: inline-flex;
   align-items: center;
   position: relative; }
+  .main-background:nth-child(even) {
+    background-color: black; }
   .main-background .line {
     height: 0.2rem;
     width: 100%;
@@ -109,7 +119,8 @@ a {
 
 main {
   position: relative;
-  font-family: sans-serif; }
+  font-family: sans-serif;
+  overflow: hidden; }
   main .main-wrapper {
     min-height: 100%;
     padding-top: 6rem;

@@ -1,11 +1,23 @@
 @import "variables.scss";
 
+#main-background-wrapper {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -3;
+}
+
 .main-background {
-  height: 2rem;
-  width: 2rem;
-  display: flex;
+  height: 3rem;
+  width: 3rem;
+  display: inline-flex;
   align-items: center;
   position: relative;
+  &:nth-child(odd) {
+    background-color: black;
+  }
 
   & .line {
     height: 0.2rem;
