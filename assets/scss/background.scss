@@ -1,0 +1,33 @@
+@import "variables.scss";
+
+#main-background-wrapper {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -3;
+}
+
+.main-background {
+  width: 2rem;
+  height: 2rem;
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  &:nth-child(odd) {
+    background-color: #605e5a;
+  }
+
+  & .line {
+    height: 0.2rem;
+    width: 100%;
+    background-color: #ffe4c4;
+    border-radius: 50%;
+  }
+  & .line-2 {
+    transform: rotate(90deg);
+    position: absolute;
+    // this will bring above the last line
+  }
+}

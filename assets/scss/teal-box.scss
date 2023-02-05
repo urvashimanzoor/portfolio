@@ -32,13 +32,13 @@
     background-color: $teal-box-color;
 
     & img {
-      box-shadow: 2px 2px 15px #cccc;
-      clip-path: inset(-1px -2px -15px -1px);
+      box-shadow: 0.2rem 0.2rem 1.5rem #cccc;
+      clip-path: inset(-0.1rem -0.2rem -1.5rem -0.1rem);
     }
 
     &-wrapper {
       position: absolute;
-      top: calc(#{$header-height} + #{$typewriter-margin-top} + 85px);
+      top: calc(#{$header-height} + #{$typewriter-margin-top} + 8.5rem);
       bottom: 0;
       left: 0;
       right: 0;

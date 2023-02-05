@@ -1,4 +1,4 @@
-@import "animation.scss", "teal-box.scss";
+@import "animation.scss", "background.scss", "teal-box.scss";
 
 * {
   padding: 0;
@@ -6,6 +6,11 @@
   /* to add padding and border with height to all */
   box-sizing: border-box;
 }
+
+html {
+  font-size: 10px;
+}
+
 body {
   background-color: #6a3952;
 }
@@ -29,6 +34,8 @@ a {
 
 main {
   position: relative;
+  overflow: hidden;
+
   & .main-wrapper {
     min-height: 100%;
     padding-top: $header-height;
@@ -46,7 +53,7 @@ cuz we want it to have 100% no matter which page */
     width: 100%;
     & .nav-link {
       height: 100%;
-      padding: 0 10px;
+      padding: 0 1rem;
       display: flex;
       align-items: center;
       &-wrapper {
@@ -54,6 +61,7 @@ cuz we want it to have 100% no matter which page */
         display: flex;
         justify-content: end;
         align-items: center;
+        font-size: 1.5rem;
       }
       &:hover {
         background-color: #ffffff;
@@ -72,15 +80,15 @@ cuz we want it to have 100% no matter which page */
     & .title {
       overflow: hidden;
       white-space: nowrap;
-      letter-spacing: -4px;
+      letter-spacing: -0.3rem;
       font-size: $typewriter-font-size;
 
       animation: typing 3.5s steps(40, end);
     }
     & .prompt {
       align-self: end;
-      width: 25px;
-      height: 3px;
+      width: 2.5rem;
+      height: 0.3rem;
 
       animation: blink-caret 0.75s step-end infinite;
     }
